@@ -1,0 +1,4 @@
+tmp/empty.txt 0 bytes
+tmp/run.log 8 bytes
+docs/notes one.txt 11 bytes
+docs/.secret.txt 6 bytes
