@@ -1,0 +1,4 @@
+(base) ztmy@ubuntu:~$ cd ~/Epi1/e03
+(base) ztmy@ubuntu:~/Epi1/e03$ test -d tmp/mydir || mkdir -p /tmp/mydir
+(base) ztmy@ubuntu:~/Epi1/e03$ ls -d /tmp/mydir
+/tmp/mydir
