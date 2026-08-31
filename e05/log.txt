@@ -1,0 +1,7 @@
+(base) ztmy@ubuntu:~$ find ~ -type f | sed 's/.*\.//' | grep -v '/' | sort | uniq -c | sort -nr | head -5
+find: ‘/home/ztmy/.dbus’: Permission denied
+  29654 py
+  27376 pyc
+  23949 h
+   5123 cmake
+   2809 json
