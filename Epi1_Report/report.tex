@@ -14,34 +14,49 @@
 
 \newcommand{\ul}[1]{\underline{#1}}
 
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.3em}
+
 \begin{document}
 
-\textbf{《系统开发工具基础》实验报告}
+\begin{center}
+  {\LARGE\bfseries 《系统开发工具基础》实验报告}
 
-\textbf{姓 名：} \ul{夏昕}
+  \vspace{1.2em}
 
-\textbf{学 号：} \ul{25080012068}
+  \renewcommand{\arraystretch}{1.6}
+  \begin{tabular}{l@{\hspace{1em}}l@{\hspace{3em}}l@{\hspace{1em}}l}
+    \textbf{姓名\hspace{2em}：} & \ul{夏昕} & \textbf{学号\hspace{2em}：} & \ul{25080012068} \\
+    \textbf{专业\hspace{2em}：} & \ul{软件工程} & \textbf{任课教师：} & \ul{周小伟} \\
+    \textbf{实验时间：} & \ul{2026/8/24} & \textbf{实验周次：} & \ul{第 1 周} \\
+  \end{tabular}
 
-\textbf{专 业：} \ul{软件工程}
+  \vspace{1.2em}
 
-\textbf{实验时间：} \ul{2026/8/24}
+  \textbf{GitHub仓库链接：}\url{https://github.com/ztmy1110/system-development-tools}
 
-\textbf{任课教师：} \ul{周小伟}
+  \vspace{1em}
 
-\textbf{GitHub仓库链接：https://github.com/ztmy1110/system-development-tools}
+  {\Large\bfseries commit 记录}
+\end{center}
 
-\textbf{commit记录}
+\noindent\rule{\linewidth}{0.4pt}
+
+\medskip
 
 \includegraphics[width=6.65354in,height=3.8132in]{media/media/image1.png}
 
 \textbf{课堂习题}
 
+\vspace{1em}
 \textbf{第1题：含空格文件名的批量整理}
 
+\vspace{0.6em}
 \textbf{一、主题}
 
 Shell 基础与文件系统
 
+\vspace{0.6em}
 \textbf{二、题目要求}
 
 1.创建input/docs 和 input/tmp；创建 input/docs/notes
@@ -55,6 +70,7 @@ input/run.log（任意两行日志）。
 
 4.将复制后的目录权限设为750、普通文件权限设为640；生成inventory.txt，列出相对路径和字节数。
 
+\vspace{0.6em}
 \textbf{三、源程序代码}
 
 cd \textasciitilde/Epi1
@@ -98,10 +114,12 @@ bytes\textbackslash n\textquotesingle{} \textgreater{} inventory.txt
 
 cat inventory.txt
 
+\vspace{0.6em}
 \textbf{四、程序运行结果}
 
 \includegraphics[width=6.65694in,height=3.95556in]{media/media/image2.png}
 
+\vspace{0.6em}
 \textbf{五、解题感悟}
 
 1. 熟悉了 mkdir、cp、find、chmod 等常用 Shell 命令。
@@ -110,12 +128,15 @@ cat inventory.txt
 
 3. 对 Linux 文件权限以及命令行批量处理文件有了更直观的理解。
 
+\vspace{1em}
 \textbf{第2题：随机访问日志统计}
 
+\vspace{0.6em}
 \textbf{一、主题}
 
 Shell 管道与文本处理
 
+\vspace{0.6em}
 \textbf{二、题目要求}
 
 1.编写analyze.sh，接收一个CSV文件路径；文件不存在时将错误写入stderr并返回非零退出码。
@@ -126,6 +147,7 @@ Shell 管道与文本处理
 
 4.分别对access.csv和一个不存在的文件运行脚本；不得使用Python、电子表格或手工统计。
 
+\vspace{0.6em}
 \textbf{三、源程序代码}
 
 cd \textasciitilde/Epi1/q02
@@ -208,10 +230,12 @@ printf "\%.2f\textbackslash n", sum / count
 
 \textquotesingle{} "\$1"
 
+\vspace{0.6em}
 \textbf{四、程序运行结果}
 
 \includegraphics[width=6.65694in,height=3.98542in]{media/media/image3.png}
 
+\vspace{0.6em}
 \textbf{五、解题感悟}
 
 1. 熟悉了 awk、sort、head 以及管道的基本使用方法。
@@ -220,12 +244,15 @@ printf "\%.2f\textbackslash n", sum / count
 
 3. 加深了对 Shell 脚本、错误处理和管道处理思想的理解。
 
+\vspace{1em}
 \textbf{第3题：制造、解决并解释一次合并冲突}
 
+\vspace{0.6em}
 \textbf{一、主题}
 
 Version Control and Git
 
+\vspace{0.6em}
 \textbf{二、题目要求}
 
 1.初始化仓库，在main创建config.txt，内容为mode=normal，并完成初始提交。
@@ -239,6 +266,7 @@ note=reviewed。
 4.确认工作区干净，运行gitlog --all --graph --decorate -\/-oneline
 查看历史。
 
+\vspace{0.6em}
 \textbf{三、源程序代码}
 
 cd \textasciitilde/Epi1
@@ -294,10 +322,12 @@ git log -\/-all -\/-graph -\/-decorate -\/-oneline
 
 cat config.txt
 
+\vspace{0.6em}
 \textbf{四、程序运行结果}
 
 \includegraphics[width=6.65694in,height=3.97014in]{media/media/image4.png}
 
+\vspace{0.6em}
 \textbf{五、解题感悟}
 
 1. 进一步理解了 Git 中分支、提交和合并的基本概念。
@@ -306,12 +336,15 @@ cat config.txt
 
 3. 对 Git 的版本管理和分支协作流程有了更加清晰的认识。
 
+\vspace{1em}
 \textbf{第4题：修复并构建一页技术说明}
 
+\vspace{0.6em}
 \textbf{一、主题}
 
 LaTeX 文档编辑
 
+\vspace{0.6em}
 \textbf{二、题目要求}
 
 1.加入一个带编号和label的公式，并在正文中使用ref或eqref引用。
@@ -322,6 +355,7 @@ LaTeX 文档编辑
 
 4.确认PDF能打开，且交叉引用不显示``??''。
 
+\vspace{0.6em}
 \textbf{三、源程序代码}
 
 cd \textasciitilde/Epi1
@@ -410,10 +444,12 @@ were completed successfully.
 
 \textbackslash end\{document\}
 
+\vspace{0.6em}
 \textbf{四、程序运行结果}
 
 \includegraphics[width=6.65694in,height=3.56736in]{media/media/image5.png}
 
+\vspace{0.6em}
 \textbf{五、解题感悟}
 
 1. 熟悉了 LaTeX 文档的基本结构以及命令行编译方法。
@@ -424,17 +460,21 @@ were completed successfully.
 
 \textbf{课后练习}
 
+\vspace{1em}
 \textbf{练习1：脚本编写与文件读取}
 
+\vspace{0.6em}
 \textbf{一、主题}
 
 Shell 基础与文件系统
 
+\vspace{0.6em}
 \textbf{二、题目要求}
 
 写一个脚本，接收文件名参数（\$1），用 test -f 或 {[} -f ... {]}
 检查该文件是否存在，并根据结果输出不同提示。
 
+\vspace{0.6em}
 \textbf{三、源程序代码}
 
 \textbf{\ul{check.sh}}
@@ -451,10 +491,12 @@ echo "file not found: \$1"
 
 fi
 
+\vspace{0.6em}
 \textbf{四、程序运行结果}
 
 \includegraphics[width=6.65694in,height=3.97014in]{media/media/image6.png}
 
+\vspace{0.6em}
 \textbf{五、解题感悟}
 
 1. 学会了使用 `\$1` 获取脚本运行时传入的文件名参数。
@@ -463,18 +505,22 @@ fi
 
 3. 加深了对 Shell 中条件判断和分支结构的理解。
 
+\vspace{1em}
 \textbf{练习2：shell的标准流与重定向}
 
+\vspace{0.6em}
 \textbf{一、主题}
 
 Shell 基础与文件系统
 
+\vspace{0.6em}
 \textbf{二、题目要求}
 
 Shell 有三条标准流：stdin（0）、stdout（1）、stderr（2）。运行 ls
 /nonexistent /tmp ，把 stdout 和 stderr
 分别重定向到两个文件。你将如何把两者都重定向到同一个文件？
 
+\vspace{0.6em}
 \textbf{三、源程序代码}
 
 cd Epi1/e02
@@ -492,10 +538,12 @@ ls /nonexistent /tmp \textgreater{} output.txt 2\textgreater\&1
 
 cat output.txt
 
+\vspace{0.6em}
 \textbf{四、程序运行结果}
 
 \includegraphics[width=6.65694in,height=4.13403in]{media/media/image7.png}
 
+\vspace{0.6em}
 \textbf{五、解题感悟}
 
 1. 了解了 Shell 中 stdin、stdout 和 stderr 三种标准流及其文件描述符。
@@ -506,12 +554,15 @@ cat output.txt
 3. 理解了 `2\textgreater\&1`
 的作用，掌握了将标准输出和错误输出合并到同一文件的方法。
 
+\vspace{1em}
 \textbf{练习3：条件执行与退出状态控制}
 
+\vspace{0.6em}
 \textbf{一、主题}
 
 Shell 基础与文件系统
 
+\vspace{0.6em}
 \textbf{二、题目要求}
 
 \$? 保存上一条命令的退出状态（0 表示成功）。\&\&
@@ -519,14 +570,17 @@ Shell 基础与文件系统
 仅在前一条失败时执行后一条。写一个一行命令：仅当 /tmp/mydir
 不存在时才创建它。
 
+\vspace{0.6em}
 \textbf{三、源程序代码}
 
 test -d /tmp/mydir \textbar\textbar{} mkdir -p /tmp/mydir
 
+\vspace{0.6em}
 \textbf{四、程序运行结果}
 
 \includegraphics[width=6.65694in,height=3.97014in]{media/media/image8.png}
 
+\vspace{0.6em}
 \textbf{五、解题感悟}
 
 1. 学会了使用 \textbar\textbar{}
@@ -538,25 +592,31 @@ test -d /tmp/mydir \textbar\textbar{} mkdir -p /tmp/mydir
 3. 通过实际操作发现，Shell
 命令比较简单，但路径写错或者符号使用错误就容易导致命令执行失败。
 
+\vspace{1em}
 \textbf{练习4：命令替换与日期格式化}
 
+\vspace{0.6em}
 \textbf{一、主题}
 
 Shell 基础与文件系统
 
+\vspace{0.6em}
 \textbf{二、题目要求}
 
 写一条命令，把文件复制为带当天日期的备份文件名（例如 notes.txt →
 notes\_2026-01-12.txt）。（提示：\$(date +\%Y-\%m-\%d)）
 
+\vspace{0.6em}
 \textbf{三、源程序代码}
 
 cp notes.txt "notes\_\$(date +\%Y-\%m-\%d).txt"
 
+\vspace{0.6em}
 \textbf{四、程序运行结果}
 
 \includegraphics[width=6.65694in,height=4.01458in]{media/media/image9.png}
 
+\vspace{0.6em}
 \textbf{五、解题感悟}
 
 1. 学会了使用 `\$(...)` 进行命令替换，将 `date`
@@ -569,17 +629,21 @@ cp notes.txt "notes\_\$(date +\%Y-\%m-\%d).txt"
 通过实际操作掌握了利用当前日期生成备份文件名的方法，也认识到命令替换在
 Shell 中可以提高命令使用的灵活性。
 
+\vspace{1em}
 \textbf{练习5：}
 
+\vspace{0.6em}
 \textbf{一、主题}
 
 Shell 管道与文本处理
 
+\vspace{0.6em}
 \textbf{二、题目要求}
 
 使用管道找出你「home 目录」中最常见的 5 种文件扩展名。（提示：组合 find
 、grep / sed / awk、sort、uniq -c 以及 head）
 
+\vspace{0.6em}
 \textbf{三、源程序代码}
 
 find \textasciitilde{} -type f \textbar{} sed
@@ -587,10 +651,12 @@ find \textasciitilde{} -type f \textbar{} sed
 -v \textquotesingle/\textquotesingle{} \textbar{} sort \textbar{} uniq
 -c \textbar{} sort -nr \textbar{} head -5
 
+\vspace{0.6em}
 \textbf{四、程序运行结果}
 
 \includegraphics[width=6.65694in,height=3.98542in]{media/media/image10.png}
 
+\vspace{0.6em}
 \textbf{五、解题感悟}
 
 1. 学会了使用 `find`
@@ -602,12 +668,15 @@ find \textasciitilde{} -type f \textbar{} sed
 3.
 通过这道题发现，多个简单命令组合起来也能完成比较复杂的任务，对管道的使用更加熟悉了。
 
+\vspace{1em}
 \textbf{练习6：使用 find、xargs 统计 Shell 文件行数}
 
+\vspace{0.6em}
 \textbf{一、主题}
 
 Shell 管道与文本处理
 
+\vspace{0.6em}
 \textbf{二、题目要求}
 
 1.xargs 会把 stdin 的每一行转换为命令参数。
@@ -617,14 +686,17 @@ wc -l 统计每个文件行数。
 
 3.加分项：正确处理文件名中的空格。（提示：-print0 和 -0）
 
+\vspace{0.6em}
 \textbf{三、源程序代码}
 
 find .. -type f -name "*.sh" -print0 \textbar{} xargs -0 -n 1 wc -l
 
+\vspace{0.6em}
 \textbf{四、程序运行结果}
 
 \includegraphics[width=6.65694in,height=3.98542in]{media/media/image11.png}
 
+\vspace{0.6em}
 \textbf{五、解题感悟}
 
 1. 学会了使用 `find` 查找指定类型的文件，并通过管道将结果传给 `xargs`
@@ -636,12 +708,15 @@ find .. -type f -name "*.sh" -print0 \textbar{} xargs -0 -n 1 wc -l
 3. 通过这道题熟悉了 `wc -l` 的用法，也更加理解了多个 Shell
 命令通过管道组合使用的方法。
 
+\vspace{1em}
 \textbf{练习7：使用 git stash 暂存未提交的修改}
 
+\vspace{0.6em}
 \textbf{一、主题}
 
 Version Control and Git
 
+\vspace{0.6em}
 \textbf{二、题目要求}
 
 1.Clone 一个 GitHub 仓库，修改其中一个已有文件，然后执行 git
@@ -651,6 +726,7 @@ stash，观察工作区变化。
 
 3.再运行 git stash pop 恢复修改，并说明 git stash 在什么场景下有用。
 
+\vspace{0.6em}
 \textbf{三、源程序代码}
 
 cd \textasciitilde/Epi1
@@ -675,10 +751,12 @@ git stash pop
 
 git status
 
+\vspace{0.6em}
 \textbf{四、程序运行结果}
 
 \includegraphics[width=6.65694in,height=3.95556in]{media/media/image12.png}
 
+\vspace{0.6em}
 \textbf{五、解题感悟}
 
 1. 学会了使用 `git stash` 临时保存没有提交的修改，并通过 `git stash pop`
@@ -690,12 +768,15 @@ git status
 3. 通过这道题认识到，在需要临时切换分支或者处理其他任务时，可以使用 `git
 stash` 保存当前工作，避免未完成的修改影响后续操作。
 
+\vspace{1em}
 \textbf{练习8：使用 git config 创建命令别名}
 
+\vspace{0.6em}
 \textbf{一、主题}
 
 Version Control and Git
 
+\vspace{0.6em}
 \textbf{二、题目要求}
 
 1.和许多命令行工具一样，Git 也提供了一个配置文件（也叫
@@ -707,15 +788,18 @@ dotfile，隐藏配置文件），名为 \textasciitilde/.gitconfig。
 3.你可以直接编辑 \textasciitilde/.gitconfig 文件，也可以使用 git config
 命令来添加别名。
 
+\vspace{0.6em}
 \textbf{三、源程序代码}
 
 git config -\/-global alias.graph \textquotesingle log -\/-all -\/-graph
 -\/-decorate -\/-oneline\textquotesingle{}
 
+\vspace{0.6em}
 \textbf{四、程序运行结果}
 
 \includegraphics[width=6.65694in,height=3.92569in]{media/media/image13.png}
 
+\vspace{0.6em}
 \textbf{五、解题感悟}
 
 1. 学会了使用 `git config` 配置 Git
@@ -727,16 +811,20 @@ git config -\/-global alias.graph \textquotesingle log -\/-all -\/-graph
 3. 通过这道题认识到给常用命令设置别名可以减少重复输入，提高使用 Git
 的效率。
 
+\vspace{1em}
 \textbf{练习9：LaTeX 表格的创建与编译}
 
+\vspace{0.6em}
 \textbf{一、主题}
 
 LaTeX 文档编辑
 
+\vspace{0.6em}
 \textbf{二、题目要求}
 
 尝试画出下列表格：\includegraphics[width=6.65694in,height=2.38819in]{media/media/image14.png}
 
+\vspace{0.6em}
 \textbf{三、源程序代码}
 
 cd \textasciitilde/Epi1/e09
@@ -797,10 +885,12 @@ Paris \& 49835 \& 51009 \& 51970 \textbackslash\textbackslash{}
 
 \textbackslash end\{document\}
 
+\vspace{0.6em}
 \textbf{四、程序运行结果}
 
 \includegraphics[width=6.65694in,height=3.55208in]{media/media/image15.png}
 
+\vspace{0.6em}
 \textbf{五、解题感悟}
 
 1. 学会了使用 `tabular` 环境创建 LaTeX 表格，并了解了
@@ -813,12 +903,15 @@ Paris \& 49835 \& 51009 \& 51970 \textbackslash\textbackslash{}
 3. 了解了 `pdflatex` 和 `latexmk` 的区别，知道简单文档可以直接使用
 `pdflatex` 编译，而复杂文档可以使用 `latexmk` 自动完成多次编译。
 
+\vspace{1em}
 \textbf{练习10：LaTeX 图片的插入与排版}
 
+\vspace{0.6em}
 \textbf{一、主题}
 
 LaTeX 文档编辑
 
+\vspace{0.6em}
 \textbf{二、题目要求}
 
 1.在你文档的前导命令中添加 \textbackslash usepackage\{graphicx\}。
@@ -838,6 +931,7 @@ LaTeX 文档编辑
 
 \textbackslash end\{figure\}
 
+\vspace{0.6em}
 \textbf{三、源程序代码}
 
 cd \textasciitilde/Epi1/e10
@@ -872,10 +966,12 @@ This is my terminal image:
 
 \textbackslash end\{document\}
 
+\vspace{0.6em}
 \textbf{四、程序运行结果}
 
 \includegraphics[width=6.65694in,height=3.91042in]{media/media/image16.png}
 
+\vspace{0.6em}
 \textbf{五、解题感悟}
 
 1. 学会了使用 `graphicx` 宏包和 `\textbackslash includegraphics` 命令在
@@ -888,18 +984,22 @@ LaTeX 中插入图片。
 3. 通过实际编译发现，图片文件的位置和文件名需要与 LaTeX
 文件对应，否则编译时容易出现找不到图片的问题。
 
+\vspace{1em}
 \textbf{练习11：LaTeX 数学公式的编写}
 
+\vspace{0.6em}
 \textbf{一、主题}
 
 LaTeX 文档编辑
 
+\vspace{0.6em}
 \textbf{二、题目要求}
 
 撰写代码来生成下列公式：
 
 \includegraphics[width=6.69306in,height=2.21042in]{media/media/image17.png}
 
+\vspace{0.6em}
 \textbf{三、源程序代码}
 
 cd \textasciitilde/Epi1/e11
@@ -958,10 +1058,12 @@ x = \textbackslash sqrt\{\textbackslash frac\{x\_i\}\{z\}y\}
 
 \textbackslash end\{document\}
 
+\vspace{0.6em}
 \textbf{四、程序运行结果}
 
 \includegraphics[width=6.65694in,height=3.92569in]{media/media/image18.png}
 
+\vspace{0.6em}
 \textbf{五、解题感悟}
 
 1. 学会了使用 `equation` 环境编写数学公式，并了解了公式编号的生成方式。
