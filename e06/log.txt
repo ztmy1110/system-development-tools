@@ -1,4 +1,0 @@
-(base) ztmy@ubuntu:~$ cd ~/Epi1/e06
-(base) ztmy@ubuntu:~/Epi1/e06$ find .. -type f -name "*.sh" -print0 | xargs -0 -n 1 wc -l
-7 ../e01/check.sh
-38 ../q02/analyze.sh
