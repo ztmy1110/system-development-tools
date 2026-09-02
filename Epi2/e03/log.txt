@@ -1,0 +1,6 @@
+xx@Ubuntu:~/system-development-tools/Epi2/e03$ alias dc=cd
+xx@Ubuntu:~/system-development-tools/Epi2/e03$ pwd
+/home/xx/system-development-tools/Epi2/e03
+xx@Ubuntu:~/system-development-tools/Epi2/e03$ dc ..
+xx@Ubuntu:~/system-development-tools/Epi2$ pwd
+/home/xx/system-development-tools/Epi2
