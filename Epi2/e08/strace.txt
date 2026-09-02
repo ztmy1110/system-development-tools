@@ -1,0 +1,56 @@
+execve("/usr/bin/ls", ["ls", "-l"], 0x7fff61225a38 /* 53 vars */) = 0
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (没有那个文件或目录)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libselinux.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC) = 3
+statfs("/sys/fs/selinux", 0x7ffdc95b0b50) = -1 ENOENT (没有那个文件或目录)
+statfs("/selinux", 0x7ffdc95b0b50)      = -1 ENOENT (没有那个文件或目录)
+openat(AT_FDCWD, "/proc/filesystems", O_RDONLY|O_CLOEXEC) = 3
+access("/etc/selinux/config", F_OK)     = -1 ENOENT (没有那个文件或目录)
+openat(AT_FDCWD, "/proc/self/maps", O_RDONLY|O_CLOEXEC) = 3
+statx(AT_FDCWD, "/usr/share/coreutils/locales/ls", AT_STATX_SYNC_AS_STAT, STATX_ALL, {stx_mask=STATX_ALL|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFDIR|0755, stx_size=4096, ...}) = 0
+statx(AT_FDCWD, "/usr/share/coreutils/locales/uucore", AT_STATX_SYNC_AS_STAT, STATX_ALL, {stx_mask=STATX_ALL|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFDIR|0755, stx_size=4096, ...}) = 0
+openat(AT_FDCWD, "/usr/share/coreutils/locales/uucore/en-US.ftl", O_RDONLY|O_CLOEXEC) = 3
+statx(3, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL, {stx_mask=STATX_ALL|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=4080, ...}) = 0
+statx(AT_FDCWD, "/usr/share/coreutils/locales/ls", AT_STATX_SYNC_AS_STAT, STATX_ALL, {stx_mask=STATX_ALL|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFDIR|0755, stx_size=4096, ...}) = 0
+openat(AT_FDCWD, "/usr/share/coreutils/locales/ls/en-US.ftl", O_RDONLY|O_CLOEXEC) = -1 ENOENT (没有那个文件或目录)
+statx(AT_FDCWD, "/usr/share/coreutils/locales/uucore", AT_STATX_SYNC_AS_STAT, STATX_ALL, {stx_mask=STATX_ALL|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFDIR|0755, stx_size=4096, ...}) = 0
+openat(AT_FDCWD, "/usr/share/coreutils/locales/uucore/zh-CN.ftl", O_RDONLY|O_CLOEXEC) = -1 ENOENT (没有那个文件或目录)
+statx(AT_FDCWD, "/usr/share/coreutils/locales/ls", AT_STATX_SYNC_AS_STAT, STATX_ALL, {stx_mask=STATX_ALL|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFDIR|0755, stx_size=4096, ...}) = 0
+openat(AT_FDCWD, "/usr/share/coreutils/locales/ls/zh-CN.ftl", O_RDONLY|O_CLOEXEC) = -1 ENOENT (没有那个文件或目录)
+statx(AT_FDCWD, ".", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW, STATX_ALL, {stx_mask=STATX_ALL|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFDIR|0775, stx_size=4096, ...}) = 0
+openat(AT_FDCWD, ".", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+newfstatat(AT_FDCWD, ".", {st_mode=S_IFDIR|0775, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+statx(3, "strace.txt", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW, STATX_ALL, {stx_mask=STATX_ALL|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0664, stx_size=2972, ...}) = 0
+newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=594, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 4
+openat(AT_FDCWD, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 4
+newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=594, ...}, 0) = 0
+openat(AT_FDCWD, "/etc/group", O_RDONLY|O_CLOEXEC) = 4
+listxattr("strace.txt", "", 4096)       = 0
+listxattr("./strace.txt", "", 4096)     = 0
+openat(AT_FDCWD, "/usr/share/zoneinfo", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+openat(AT_FDCWD, "/usr/share/zoneinfo/Indian", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+openat(AT_FDCWD, "/usr/share/zoneinfo/Africa", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+openat(AT_FDCWD, "/usr/share/zoneinfo/Etc", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+openat(AT_FDCWD, "/usr/share/zoneinfo/Australia", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+openat(AT_FDCWD, "/usr/share/zoneinfo/America", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+openat(AT_FDCWD, "/usr/share/zoneinfo/America/Indiana", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+openat(AT_FDCWD, "/usr/share/zoneinfo/America/North_Dakota", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+openat(AT_FDCWD, "/usr/share/zoneinfo/America/Kentucky", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+openat(AT_FDCWD, "/usr/share/zoneinfo/America/Argentina", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+openat(AT_FDCWD, "/usr/share/zoneinfo/Antarctica", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+openat(AT_FDCWD, "/usr/share/zoneinfo/Atlantic", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+openat(AT_FDCWD, "/usr/share/zoneinfo/Europe", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+openat(AT_FDCWD, "/usr/share/zoneinfo/Arctic", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+openat(AT_FDCWD, "/usr/share/zoneinfo/Asia", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+openat(AT_FDCWD, "/usr/share/zoneinfo/Pacific", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+readlink("/etc/localtime", "/usr/share/zoneinfo/Asia/Shangha"..., 256) = 33
+openat(AT_FDCWD, "/usr/share/zoneinfo/Asia/Shanghai", O_RDONLY|O_CLOEXEC) = 4
+statx(4, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL, {stx_mask=STATX_ALL|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=561, ...}) = 0
+statx(4, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL, {stx_mask=STATX_ALL|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=561, ...}) = 0
++++ exited with 0 +++
