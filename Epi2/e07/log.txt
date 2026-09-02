@@ -1,4 +1,4 @@
-x@Ubuntu:~/system-development-tools/Epi2/e07$ vim uaf.c
+xx@Ubuntu:~/system-development-tools/Epi2/e07$ vim uaf.c
 xx@Ubuntu:~/system-development-tools/Epi2/e07$ gcc -g uaf.c -o uaf
 ./uaf
 Hello
