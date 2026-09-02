@@ -1,0 +1,7 @@
+xx@Ubuntu:~/system-development-tools/Epi2/e02$ touch test.txt
+xx@Ubuntu:~/system-development-tools/Epi2/e02$ ls -laht --color=auto
+total 8.0K
+drwxrwxr-x 2 xx xx 4.0K Sep  3 01:41 .
+-rw-rw-r-- 1 xx xx    0 Sep  3 01:41 test.txt
+drwxrwxr-x 9 xx xx 4.0K Sep  3 01:38 ..
+
