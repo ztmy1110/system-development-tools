@@ -1,0 +1,11 @@
+xx@Ubuntu:~/system-development-tools/Epi2/e01$ touch -- -myfile
+xx@Ubuntu:~/system-development-tools/Epi2/e01$ ls -l -- -myfile
+-rw-rw-r-- 1 xx xx 0 Sep  3 01:20 -myfile
+xx@Ubuntu:~/system-development-tools/Epi2/e01$ rm -myfile
+rm: 无效的选项 -- m
+尝试使用 "rm ./-myfile" 删除文件 '-myfile'。
+请尝试执行 "rm --help" 来获取更多信息。
+xx@Ubuntu:~/system-development-tools/Epi2/e01$ rm ./-myfile
+xx@Ubuntu:~/system-development-tools/Epi2/e01$ ls -l ./-myfile
+ls: cannot access './-myfile': No such file or directory
+
