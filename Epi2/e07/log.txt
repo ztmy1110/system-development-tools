@@ -1,0 +1,67 @@
+x@Ubuntu:~/system-development-tools/Epi2/e07$ vim uaf.c
+xx@Ubuntu:~/system-development-tools/Epi2/e07$ gcc -g uaf.c -o uaf
+./uaf
+Hello
+xx@Ubuntu:~/system-development-tools/Epi2/e07$ gcc -fsanitize=address -g uaf.c -o uaf_asan
+xx@Ubuntu:~/system-development-tools/Epi2/e07$ ./uaf_asan
+Hello
+=================================================================
+==36555==ERROR: AddressSanitizer: heap-use-after-free on address 0x762ee77e0010 at pc 0x60d8c03303c5 bp 0x7fffcefbc3a0 sp 0x7fffcefbc390
+WRITE of size 1 at 0x762ee77e0010 thread T0
+    #0 0x60d8c03303c4 in main /home/xx/system-development-tools/Epi2/e07/uaf.c:17
+    #1 0x7a0ee842a600 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:59
+    #2 0x7a0ee842a717 in __libc_start_main_impl ../csu/libc-start.c:360
+    #3 0x60d8c0330124 in _start (/home/xx/system-development-tools/Epi2/e07/uaf_asan+0x1124) (BuildId: 1a7c6c3e1bdc1c416f3d12d6be2dd7660708c6a0)
+
+0x762ee77e0010 is located 0 bytes inside of 6-byte region [0x762ee77e0010,0x762ee77e0016)
+freed by thread T0 here:
+    #0 0x7a0ee892a3ff in free ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:51
+    #1 0x60d8c0330390 in main /home/xx/system-development-tools/Epi2/e07/uaf.c:15
+    #2 0x7a0ee842a600 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:59
+    #3 0x7a0ee842a717 in __libc_start_main_impl ../csu/libc-start.c:360
+    #4 0x60d8c0330124 in _start (/home/xx/system-development-tools/Epi2/e07/uaf_asan+0x1124) (BuildId: 1a7c6c3e1bdc1c416f3d12d6be2dd7660708c6a0)
+
+previously allocated by thread T0 here:
+    #0 0x7a0ee892b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x60d8c03301fe in main /home/xx/system-development-tools/Epi2/e07/uaf.c:5
+    #2 0x7a0ee842a600 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:59
+    #3 0x7a0ee842a717 in __libc_start_main_impl ../csu/libc-start.c:360
+    #4 0x60d8c0330124 in _start (/home/xx/system-development-tools/Epi2/e07/uaf_asan+0x1124) (BuildId: 1a7c6c3e1bdc1c416f3d12d6be2dd7660708c6a0)
+
+SUMMARY: AddressSanitizer: heap-use-after-free /home/xx/system-development-tools/Epi2/e07/uaf.c:17 in main
+Shadow bytes around the buggy address:
+  0x762ee77dfd80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x762ee77dfe00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x762ee77dfe80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x762ee77dff00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x762ee77dff80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x762ee77e0000: fa fa[fd]fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x762ee77e0080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x762ee77e0100: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x762ee77e0180: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x762ee77e0200: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x762ee77e0280: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==36555==ABORTING
+xx@Ubuntu:~/system-development-tools/Epi2/e07$ vim uaf.c
+xx@Ubuntu:~/system-development-tools/Epi2/e07$ gcc -fsanitize=address -g uaf.c -o uaf_asan
+xx@Ubuntu:~/system-development-tools/Epi2/e07$ ./uaf_asan
+Hello
