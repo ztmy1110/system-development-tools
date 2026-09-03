@@ -1,0 +1,19 @@
+xx@Ubuntu:~/system-development-tools/Epi2/e10$ vim test.c
+xx@Ubuntu:~/system-development-tools/Epi2/e10$ gcc -O2 -g test.c -o test
+xx@Ubuntu:~/system-development-tools/Epi2/e10$ perf stat ./test
+sum = 4999999950000000
+
+ Performance counter stats for './test':
+
+                 0      context-switches:u               #      0.0 cs/sec  cs_per_second     
+                 0      cpu-migrations:u                 #      0.0 migrations/sec  migrations_per_second
+                59      page-faults:u                    #  79756.4 faults/sec  page_faults_per_second
+              0.74 msec task-clock:u                     #      0.1 CPUs  CPUs_utilized       
+   <not supported>      cpu_core/cpu-cycles/u            #      nan GHz  cycles_frequency     
+   <not supported>      cpu_atom/cpu-cycles/u            #      nan GHz  cycles_frequency     
+   <not supported>      cpu_lowpower/cpu-cycles/u        #      nan GHz  cycles_frequency     
+
+       0.001462935 seconds time elapsed
+
+       0.000000000 seconds user
+       0.001474000 seconds sys
