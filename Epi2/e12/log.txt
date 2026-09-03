@@ -1,0 +1,4 @@
+xx@Ubuntu:~/system-development-tools/Epi2/e12$ sudo lsof -i :4444
+[sudo: authenticate] 密码：       
+COMMAND  PID USER FD   TYPE DEVICE SIZE/OFF NODE NAME
+python3 9317   xx 3u  IPv4  52201      0t0  TCP *:4444 (LISTEN)
