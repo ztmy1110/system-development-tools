@@ -1,0 +1,8 @@
+xx@Ubuntu:~/system-development-tools/Epi2/e11$ vim test.sh
+xx@Ubuntu:~/system-development-tools/Epi2/e11$ chmod +x test.sh
+xx@Ubuntu:~/system-development-tools/Epi2/e11$ ./test.sh
+50005000
+xx@Ubuntu:~/system-development-tools/Epi2/e11$ hyperfine './test.sh'
+Benchmark 1: ./test.sh
+  Time (mean ± σ):      12.0 ms ±   0.6 ms    [User: 9.7 ms, System: 2.5 ms]
+  Range (min … max):    10.8 ms …  14.3 ms    232 run
