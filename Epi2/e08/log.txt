@@ -1,4 +1,4 @@
-x@Ubuntu:~/system-development-tools/Epi2/e08$ strace ls -l
+xx@Ubuntu:~/system-development-tools/Epi2/e08$ strace ls -l
 execve("/usr/bin/ls", ["ls", "-l"], 0x7ffdd9161448 /* 53 vars */) = 0
 brk(NULL)                               = 0x60de55290000
 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7e7be80cc000
